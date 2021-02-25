@@ -2,7 +2,9 @@ image: atlassian/default-workflow:
 
 workflow:
   rules:
-    - when: never
+    - if: $CI_COMMIT_MESSAGE =~ /-draft$/
+      when: never
+    - if: '$CI_PIPELINE_SOURCE == "push"'
 
 build:
   stage: build
