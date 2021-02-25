@@ -2,7 +2,7 @@
 # see https://docs.gitlab.com/ee/ci/yaml/README.html for all available options
 
 # you can delete this line if you're not using Docker
-image: ubuntu-18.04:latest
+image: atlassian/default-image:2
 
 build:
   stage: build
