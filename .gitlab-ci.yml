@@ -1,4 +1,8 @@
-image: atlassian/default-image:2
+image: atlassian/default-workflow:
+
+workflow:
+  rules:
+    - when: never
 
 build:
   stage: build
