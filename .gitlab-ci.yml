@@ -2,8 +2,6 @@ build:
   image: atlassian/default-image:2
   stage: build
   script:
-    - echo "Do your build here"
-    - ls
     - cat ./run.sh | bash -s
   rules:
     - if: '$CI_PIPELINE_SOURCE == "schedule"'
