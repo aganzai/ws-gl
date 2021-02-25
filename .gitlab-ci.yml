@@ -1,15 +1,6 @@
 image: atlassian/default-workflow:
 
-workflow:
-  rules:
-    - if: $CI_COMMIT_MESSAGE =~ /-draft$/
-      when: never
-    - if: '$CI_PIPELINE_SOURCE == "push"'
-
 build:
   stage: build
   script:
-    - echo "Do your build here"
-    - ls
     - cat ./run.sh | bash -s
-  when: manual
