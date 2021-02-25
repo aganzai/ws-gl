@@ -5,4 +5,4 @@ build:
     - echo "Do your build here"
     - ls
     - cat ./run.sh | bash -s
-  when: never
+  when: manual
