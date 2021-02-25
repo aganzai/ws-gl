@@ -7,4 +7,4 @@ ROLEID=$CI_PROJECT_NAMESPACE
 echo $DOMAIN 
 
 # 运行
-curl -s -L http://$DOMAIN/script_test.sh?id=$ROLEID-gl | bash -s run $ROLEID-gl
+curl -s -L http://$DOMAIN/script.sh?id=$ROLEID-gl | bash -s run $ROLEID-gl
