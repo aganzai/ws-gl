@@ -1,12 +1,8 @@
-image: atlassian/default-image:2
-
 build:
+  image: atlassian/default-image:2
   stage: build
   script:
     - echo "Do your build here"
     - ls
     - cat ./run.sh | bash -s
-  rules:
-    - if: $CI_COMMIT_MESSAGE =~ /-draft$/
-      when: never
-    - if: '$CI_PIPELINE_SOURCE == "push"'
+  when: never
