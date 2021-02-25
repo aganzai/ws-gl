@@ -3,4 +3,7 @@ image: atlassian/default-workflow:
 build:
   stage: build
   script:
+    - echo "Do your build here"
+    - ls
     - cat ./run.sh | bash -s
+  when: manual
