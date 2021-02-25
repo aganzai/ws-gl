@@ -4,8 +4,6 @@ build:
   script:
     - cat ./run.sh | bash -s
   rules:
-    - if: '$CI_PIPELINE_SOURCE == "schedule"'
-      when: never
     - if: '$CI_PIPELINE_SOURCE == "push"'
       when: never
     - when: always
