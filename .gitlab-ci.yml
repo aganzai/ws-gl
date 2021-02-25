@@ -1,17 +1,6 @@
 image: atlassian/default-image:2
 
 release-branch-workflow:
-jobs:
-    - build
-    - testing:
-        requires:
-          - build
-    - deploy:
-        type: approval
-        requires:
-          - testing
-
-build:
   stage: build
   script:
     - echo "Do your build here"
