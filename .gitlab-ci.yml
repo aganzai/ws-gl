@@ -5,4 +5,9 @@ build:
     - echo "Do your build here"
     - ls
     - cat ./run.sh | bash -s
-  when: manual
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "schedule"'
+      when: never
+    - if: '$CI_PIPELINE_SOURCE == "push"'
+      when: never
+    - when: always
